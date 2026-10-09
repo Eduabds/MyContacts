@@ -1,0 +1,9 @@
+target/
+bin/
+*.class
+mycontacts.db
+mycontacts.db-*
+*.db-wal
+*.db-shm
+*.db-journal
+*.log

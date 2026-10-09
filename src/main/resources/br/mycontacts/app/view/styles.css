@@ -1,0 +1,40 @@
+.application-root {
+    -fx-background-color: #f4f6f8;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+}
+
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.primary-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.danger-button {
+    -fx-text-fill: #b91c1c;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d8dee6;
+    -fx-border-radius: 4px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e9eef5;
+}
+
+.text-field,
+.combo-box {
+    -fx-pref-height: 34px;
+}

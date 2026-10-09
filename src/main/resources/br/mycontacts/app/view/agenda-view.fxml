@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.mycontacts.app.AgendaViewController"
+            stylesheets="@styles.css"
+            styleClass="application-root">
+    <top>
+        <VBox spacing="14" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="16" left="20"/>
+            </padding>
+            <Label text="Agenda de contatos" styleClass="page-title"/>
+            <HBox alignment="CENTER_RIGHT">
+                <Button text="Adicionar contato" onAction="#adicionarContato"
+                        styleClass="primary-button" defaultButton="true"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Buscar:"/>
+                <TextField fx:id="campoBusca" promptText="Buscar por nome..."
+                           HBox.hgrow="ALWAYS"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="12">
+            <padding>
+                <Insets top="0" right="20" bottom="20" left="20"/>
+            </padding>
+            <TableView fx:id="tabelaContatos" VBox.vgrow="ALWAYS">
+                <placeholder>
+                    <Label text="Nenhum contato encontrado."/>
+                </placeholder>
+                <columns>
+                    <TableColumn fx:id="colunaNome" text="Nome"/>
+                    <TableColumn fx:id="colunaTelefone" text="Telefone"/>
+                    <TableColumn fx:id="colunaEmail" text="E-mail"/>
+                    <TableColumn fx:id="colunaTipo" text="Tipo"/>
+                    <TableColumn fx:id="colunaEmpresa" text="Empresa"/>
+                </columns>
+            </TableView>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Editar" onAction="#editarContatoSelecionado"/>
+                <Button text="Remover" onAction="#removerContatoSelecionado"
+                        styleClass="danger-button"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
